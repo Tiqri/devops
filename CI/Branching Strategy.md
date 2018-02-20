@@ -53,6 +53,7 @@ Hotfix branches are meant to prepare for a new production release. They arise fr
 TBD
 
 ## Branch Tagging
+TBD
 
 ## Branch Naming Convention
 
