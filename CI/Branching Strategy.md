@@ -35,19 +35,24 @@ _Bug fixes are more long-term fixes where are hotfixes are more short-term fixes
 
 Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets. By no means are these branches special from a technical perspective. The branch types are categorized by how we use them. They are of course plain old GIT branches.
 
-## Feature and Bug Branches
+## Feature and Bug Branching
 
 1. May branch off from - DEVELOP
 2. Must merge back into -  DEVELOP
 
 Feature and bug branches are used to develop new features for the upcoming or a distant future release. When starting development of a feature or fix of a bug, the target release in which this feature will be incorporated may well be unknown at that point. The essence of a feature or bug branch is that it exists if the feature or bug is in development but will eventually be merged back into DEVELOP (to add the new feature to the upcoming release) or discarded (in case of a disappointing experiment).
 
-## Hotfix branches
+## Hotfix Branching
 
 1. May branch off from: MASTER
 2. Must merge back into: DEVELOP and MASTER
 
 Hotfix branches are meant to prepare for a new production release. They arise from the necessity to act immediately upon an undesired state of a live production version. When a critical bug in a production version must be resolved immediately, a hotfix branch may be branched off from the corresponding tag on the MASTER branch that marks the production version
+
+## Release Branching
+TBD
+
+## Branch Tagging
 
 ## Branch Naming Convention
 
@@ -67,17 +72,15 @@ If you are working on a hotfix., make it a practice to name the branch with the 
 
 The name of the branch could be the JIRA bug id or feature id followed by the text in the title of the bug or the feature.
 
-# Branch merging and pull requests
+# Pull Requests
 
 The review that takes place in a pull request is critical for improving code quality. Only merge branches through pull requests that pass your review process. Avoid merging branches to the MASTER or DEVELOP branch without a pull request.
 
 Always review and merge code with pull requests.  However before sending a pull request, the developer should test his code locally thoroughly covering all scenarios
 
-**How many reviewers**
+**A sizable team should have two reviewers for a single pull request**
 
-At most for a sizable team should have two reviewers for a single pull request.
-
-Reviews in pull requests take time to complete, so your team should agree on what&#39;s expected from pull request creators and reviewers. Distribute reviewer responsibilities to share ideas across your team and spread out knowledge of your codebase. Take care assigning the same reviewer(s) to many pull requests. Pull requests work better when reviewer responsibilities are shared across the team.
+Reviews in pull requests take time to complete, so your team should agree on what's expected from pull request creators and reviewers. Distribute reviewer responsibilities to share ideas across your team and spread out knowledge of your codebase. Take care assigning the same reviewer(s) to many pull requests. Pull requests work better when reviewer responsibilities are shared across the team.
 
 Provide enough detail in the description to quickly bring reviewers up to speed with your changes.
 
@@ -86,6 +89,12 @@ Its always ideal for the reviewer to check out the code and run the changes loca
 ## Typical Git Workflow
 TBD
 
+#### What happens when you want to revert a feature branch which was merged to DEVELOP
+TBD
+
 ## Continuous Integration
+TBD
+
+## Deployment Environments
 TBD
 
