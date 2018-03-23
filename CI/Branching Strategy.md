@@ -7,8 +7,8 @@ It's always wise to keep all branches simple based on the following concepts.
 1. The central GIT repository holds two main branches with an infinite lifetime.
     * DEVELOP branch
     * MASTER branch
-2. We shall consider ORIGIN/MASTER to be the main branch where the source code of HEAD always reflects the production ready state.
-3. We shall consider ORIGIN/DEVELOP to be the main branch where the source code of the HEAD always reflects a state with the latest delivered development changes for the next release.  This is where typically any automatic nightly builds are built from (if there happens to be any).
+2. Let ORIGIN/MASTER to be the main branch where the source code of HEAD always reflects the production ready state.
+3. Let ORIGIN/DEVELOP to be the main branch where the source code of the HEAD always reflects a state with the latest delivered development changes for the next release.  This is where typically any automatic nightly builds are built from (if there happens to be any).
 4. When the source code in the DEVELOP branch reaches a stable point and is ready to be released, all of the changes should be merged back into MASTER somehow and then tagged with a release numbers. How this is done in detail will be discussed further on.
 5. Therefore, each time when changes are merged back into MASTER, this is a new production release by definition.
 6. Use feature branches for all new features, you could do the same for bugs fixes for any issues.
@@ -72,6 +72,9 @@ If you are working on a hotfix., make it a practice to name the branch with the 
 **hotfix/hot-fix-id-small-title-description-of-the-hot-fix**
 
 The name of the branch could be the JIRA bug id or feature id followed by the text in the title of the bug or the feature.
+
+# Best practises for branch merging
+TBD
 
 # Pull Requests
 
